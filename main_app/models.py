@@ -43,7 +43,7 @@ class Customer(models.Model):
 
 class Volunteer(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
-  availability_date = models.DateField(verbose_name='available date')
+  availability_date = models.DateField(verbose_name='available date', null=True)
   availability = MultiSelectField(max_length=100, choices=TIMESLOTS)
     
   customer = models.ManyToManyField(Customer, through="Timeslot")
