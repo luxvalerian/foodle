@@ -1,4 +1,4 @@
-<!-- # foodle
+# foodle
 
 foodle is a grocery delivery app, as inspired by covid-19. foodle will allow users to select groceries from certain stores, pay for them, set a delivery, and connect to a volunteer. Users will log on to a website, select a grocery store, pick their items, put them in a cart and checkout.
 
@@ -21,4 +21,4 @@ Django and Python.
 
 ## Features
 
-Grocery item selection, payment of items, delivery date, connection to volunteer. -->
+Grocery item selection, payment of items, delivery date, connection to volunteer.
