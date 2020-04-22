@@ -15,3 +15,28 @@ for (let i = 0; i < detailsButton.length; i++) {
     itemCard[i].classList.toggle('flipped');
   });
 }
+
+var modal = document.getElementById('cartModal');
+
+var btn = document.getElementById('openModal');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function () {
+  modal.style.display = 'block';
+};
+
+span.onclick = function () {
+  modal.style.display = 'none';
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var instances = M.Dropdown.init(elems);
+});
