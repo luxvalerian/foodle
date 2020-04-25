@@ -243,4 +243,22 @@ body .footer {
   padding: 2px;
   background-color: #687864;
 }
+
+.about-container .column1 {
+  float: left;
+  width: 620px;
+  margin: 10px;
+}
+
+.about-container .column2 {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+
+.about-container .column3 {
+  width: 300px;
+  float: left;
+  margin: 10px;
+}
 /*# sourceMappingURL=styles.css.map */

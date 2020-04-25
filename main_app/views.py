@@ -87,14 +87,8 @@ def volunteer_signup(request):
 
 
 def home(request):
-<<<<<<< HEAD
-    volunteer = Volunteer.objects.all()
-    context = {'volunteer': volunteer}
-    return render(request, 'home.html', context)
-=======
     return render(request, 'home.html')
 
->>>>>>> 49b433721a601b82cdb00fa1488ce0a7435c67e9
 
 def about(request):
     return render(request, 'about.html')
@@ -114,22 +108,16 @@ def profile(request):
 
 
 @login_required
-@allowed_users(allowed_roles=['customer'])
-def stores(request):
-    items = Item.objects.all()
-    context = {'product': produce_dict, 'logo': logo_img,
-               'items': items, 'walmart': walmart_fruit}
-    return render(request, 'stores/index.html', context)
-
-
-@login_required
 def stores_index(request):
     return render(request, 'stores/index.html')
 
 
 @login_required
 def stores_detail(request):
-    return render(request, 'stores/detail.html')
+    items = Item.objects.all()
+    context = {'product': produce_dict, 'logo': logo_img,
+               'items': items, 'walmart': walmart_fruit}
+    return render(request, 'stores/detail.html', context)
 
 
 def logout(request):
@@ -248,3 +236,6 @@ class VolunteerUpdate(LoginRequiredMixin, UpdateView):
 
   def get_success_url(self, *args, **kwargs):
         return reverse("profile")
+    
+def test(request):
+    return render(request, 'test/test.html')
