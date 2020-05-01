@@ -4,7 +4,7 @@
 
 <div class="login-signup-container">
     <h2>Log In</h2>
-    <form method="POST" action="{% url 'login' %}">
+    <form method="POST" action="{% url 'login' %}" >
         {% csrf_token %}
         {{ form }}
         <div class="button-container">
